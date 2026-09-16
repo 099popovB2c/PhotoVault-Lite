@@ -2,18 +2,17 @@
 
 A privacy-first local photo browser inspired by useful Google Photos / Immich workflows, without a server or upload requirement.
 
-## v0.3.0
+## v0.4.0
 
-- Local JPEG EXIF `DateTimeOriginal` reader
-- Local EXIF GPS extraction when coordinates exist
-- Timeline prefers capture date over file-modified date
-- **On this day** memories view
-- **Has GPS** smart view
-- Local-only recycle bin / hide-and-restore workflow (never deletes the original file)
-- Persistent metadata cache, favorites and hidden-state cache in browser storage
-- Search can match path and detected coordinates
-- Metadata export now includes capture date, GPS, favorites and local recycle-bin state
-- Existing folder albums and exact duplicate detection retained
+- Smart albums: **Recent 30 days**, **Screenshots**, **Large (10 MB+)**, **Portrait** and **Landscape**
+- Dynamic **year filter** based on EXIF capture date or file date
+- Local image-dimension indexing for orientation smart albums
+- **Places** view plots GPS-tagged photos on a local latitude/longitude canvas
+- GPS points are grouped into coarse coordinate buckets for quick browsing
+- Clicking a local map point opens the corresponding photo details
+- No external map tiles, reverse geocoding, analytics or GPS network requests
+- Existing EXIF dates/GPS, On This Day, favorites, duplicate finder and local recycle bin remain available
+- Metadata export upgraded to schema version 4 with width/height
 
 ## Run
 

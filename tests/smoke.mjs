@@ -1,3 +1,3 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
 const src=readFileSync(new URL('../app.js',import.meta.url),'utf8');const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
-test('local photo features are wired',()=>{assert.match(src,/showDirectoryPicker/);assert.match(src,/crypto\.subtle\.digest/);assert.match(src,/parseExif/);assert.match(src,/DateTimeOriginal/);assert.match(src,/photovault-trash/);assert.match(src,/isMemory/);assert.match(html,/On this day/);assert.match(html,/Has GPS/)});
+test('v0.4 smart albums and local places are wired',()=>{assert.match(src,/smartMatch/);assert.match(src,/renderPlaces/);assert.match(src,/createImageBitmap/);assert.match(src,/Recent 30 days|isRecent/);assert.match(src,/isScreenshot/);assert.match(src,/locationBucket/);assert.match(html,/id="year"/);assert.match(html,/id="mapSvg"/);assert.match(html,/Screenshots/);assert.match(html,/Portrait/)});
