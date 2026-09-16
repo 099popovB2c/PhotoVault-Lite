@@ -1,17 +1,19 @@
 # PhotoVault Lite
 
-A privacy-first local photo browser inspired by the useful parts of Google Photos/Immich, without a server or upload requirement.
+A privacy-first local photo browser inspired by useful Google Photos / Immich workflows, without a server or upload requirement.
 
-## v0.2.0
+## v0.3.0
 
-- Folder-based album filtering
-- Persistent local favorites
-- Newest/oldest/name/size sorting
-- Photo detail view with path, folder, size and file date
-- Exact duplicate detection with estimated reclaimable space
-- Search across filename and relative path
-- Local metadata index export
-- Installable PWA; no backend, cloud or analytics
+- Local JPEG EXIF `DateTimeOriginal` reader
+- Local EXIF GPS extraction when coordinates exist
+- Timeline prefers capture date over file-modified date
+- **On this day** memories view
+- **Has GPS** smart view
+- Local-only recycle bin / hide-and-restore workflow (never deletes the original file)
+- Persistent metadata cache, favorites and hidden-state cache in browser storage
+- Search can match path and detected coordinates
+- Metadata export now includes capture date, GPS, favorites and local recycle-bin state
+- Existing folder albums and exact duplicate detection retained
 
 ## Run
 
@@ -19,4 +21,6 @@ A privacy-first local photo browser inspired by the useful parts of Google Photo
 python -m http.server 8080
 ```
 
-Open `http://localhost:8080` in Chrome/Edge and select **Open photo folder**. PhotoVault Lite intentionally stays lightweight; it does not claim to replace backup software.
+Open `http://localhost:8080` in Chrome or Edge and select **Open photo folder**.
+
+PhotoVault Lite reads selected files locally. The recycle bin is index-only; it intentionally does not delete originals.
