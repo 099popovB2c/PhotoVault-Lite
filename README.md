@@ -4,6 +4,14 @@ PhotoVault Lite is a **privacy-first, local photo browser and organizer** for pe
 
 It runs in the browser, reads only the folder you explicitly select, builds its metadata index locally, and keeps favorites, recycle-bin state and other app metadata on your device.
 
+## Live demo
+
+PhotoVault Lite is deployed as a static web app:
+
+**https://photovault-lite.netlify.app/**
+
+The hosted shell is public, but selected photo files and PhotoVault metadata processing remain in the browser/device.
+
 ## What it does
 
 PhotoVault Lite turns a normal photo folder into a searchable local library with:
